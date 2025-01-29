@@ -1,56 +1,3 @@
-// "use client"
-// import { updateTaskAsync, deleteTaskAsync } from "../store/slice/tasksSlice";
-// import { AppDispatch } from "../store/store";
-// import { useDispatch } from "react-redux";
-// import { Task } from "../store/slice/tasksSlice";
-// import { RiDeleteBin6Line } from "react-icons/ri";
-
-// const TaskCard = ({ task }: { task: Task }) => {
-//   const dispatch = useDispatch<AppDispatch>();
-
-//   const toggleComplete = async () => {
-//     // Dispatch updateTaskAsync with the updated task object
-//     const updatedTask: Task = { ...task, completed: !task.completed };
-//     await dispatch(updateTaskAsync(updatedTask));
-//   };
-
-//   const handleDelete = async () => {
-//     if (confirm("Are you sure you want to delete this task?")) {
-//       await dispatch(deleteTaskAsync(task.id));
-//     }
-//   };
-
-//   return (
-//     <div
-//       className={`p-4 rounded-md flex w-full items-center justify-between bg-[#333333] hover:${task.color}`}
-//     >
-//       <div className="flex items-center gap-4 w-full">
-//         <input
-//           type="checkbox"
-//           checked={task.completed}
-//           onChange={toggleComplete}
-//           className="mr-2"
-//         />
-//         <h3
-//           className={`font-bold text-white ${
-//             task.completed ? "line-through opacity-60" : ""
-//           }`}
-//         >
-//           {task.title}
-//         </h3>
-//       </div>
-//       <button
-//         onClick={handleDelete}
-//         className="text-white hover:text-red-500 transition"
-//       >
-//         <RiDeleteBin6Line size={20} />
-//       </button>
-//     </div>
-//   );
-// };
-
-// export default TaskCard;
-
 "use client";
 
 import { useRouter } from "next/navigation";
@@ -82,8 +29,6 @@ const TaskCard = ({ task }: { task: Task }) => {
   return (
     <div className="flex justify-between p-4 bg-[#333333] rounded-md">
       <div className="flex gap-3 ">
-        {/* <input type="checkbox" checked={task.completed} onChange={toggleComplete} className="appearance-none" />
-        <div className="w-[18px] aspect-square rounded-full ring ring-[#4EA8DE]"></div> */}
         <label className="flex items-center space-x-2 cursor-pointer">
       <input
         type="checkbox"
